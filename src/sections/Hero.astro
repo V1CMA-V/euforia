@@ -1,0 +1,28 @@
+---
+import ButtonLink from '@/components/ButtonLink.astro'
+---
+
+<section
+  class='relative min-h-screen w-full flex items-center justify-center overflow-hidden mask-fade-bottom'
+>
+  <!-- Fondo oscurecido con imagen centrada y cubriendo todo -->
+  <img
+    src='/logo-nobg.webp'
+    alt='Imagen principal de fondo de la Euforia Fitness Club'
+    loading='lazy'
+    class='absolute inset-0 w-full h-full object-cover object-center z-0 opacity-40 transition-all duration-500'
+  />
+  <div class='absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/80 z-10'></div>
+
+  <!-- Contenido centrado -->
+  <div class='relative flex flex-col items-center justify-center h-full gap-8 z-20 px-4 py-10'>
+    <h1 class='text-5xl font-extrabold uppercase text-center drop-shadow-lg'>
+      <strong class='neonPink text-8xl font-extrabold tracking-widest'>Euforia</strong><br />
+      <span class='block text-white tracking-wider'>fitness club</span>
+    </h1>
+    <p class='text-xl md:text-2xl text-center text-white max-w-2xl drop-shadow'>
+      El arte de la movilidad, únete a la comunidad a pocos minutos de la BUAP
+    </p>
+    <ButtonLink href='#sports' text='Únete a la comunidad' />
+  </div>
+</section>
