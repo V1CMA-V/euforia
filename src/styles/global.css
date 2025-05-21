@@ -1,8 +1,82 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --color-euforia-pink: #f72585;
+  --color-euforia-purple: #7209b7;
+  --color-euforia-blue: #4361ee;
+  --color-euforia-light: #b5179e;
+  --color-euforia-bg: #0d0221;
+  --color-euforia-glow: #9d4edd;
+  --color-euforia-accent: #3a0ca3;
+}
 
 html,
 body {
   margin: 0;
   width: 100%;
-  height: 100%;
+  height: 100dvh;
+
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  color: white;
+  background-color: var(--color-euforia-bg);
+
+  /* background: linear-gradient(to top right, var(--color-euforia-bg), var(--color-euforia-pink)); */
+}
+h1 {
+  font-family: 'Audiowide', system-ui;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-euforia-pink);
+}
+
+.neonPink {
+  text-shadow: 1px 1px 20px var(--color-euforia-pink);
+}
+
+@utility mask-fade-bottom {
+  mask-image: linear-gradient(to bottom, #f72585 80%, transparent 100%);
+}
+
+.custom-hero-mask::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent 0%, var(--color-euforia-bg) 100%);
+  z-index: 50;
+}
+
+/* Scrollbar custom */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-euforia-pink);
+  border-radius: 5px;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-euforia-pink);
 }
