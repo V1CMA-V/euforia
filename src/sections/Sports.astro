@@ -1,1 +1,98 @@
-<h2>Sports</h2>
+---
+import Box from '@/icons/box.astro'
+import Calistenia from '@/icons/calistenia.astro'
+import Crossfit from '@/icons/crossfit.astro'
+import Danza from '@/icons/danza.astro'
+import Spinning from '@/icons/spinning.astro'
+import Yoga from '@/icons/yoga.astro'
+---
+
+<!--
+  Sección de deportes disponibles en Euforia Fitness Club
+  Maquetado básico siguiendo la identidad visual del sitio
+-->
+<section id='sports' class='w-full min-h-screen py-16 px-4 flex flex-col items-center'>
+  <h2
+    class='text-4xl md:text-5xl font-extrabold text-euforia-pink uppercase mb-4 tracking-wide text-center drop-shadow-lg'
+  >
+    Opciones deportivas
+  </h2>
+  <p class='text-lg md:text-xl text-white max-w-2xl text-center mb-10 opacity-90'>
+    Descubre todas las disciplinas y actividades que puedes practicar en nuestra comunidad.
+    ¡Encuentra tu pasión y mantente en movimiento!
+  </p>
+  <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-6xl'>
+    <!-- Tarjeta de ejemplo: Crossfit -->
+    <div
+      class='bg-black/70 rounded-2xl shadow-lg flex flex-col items-center p-6 border-t-4 border-euforia-pink hover:scale-105 transition-transform'
+    >
+      <div class='mb-4'>
+        <Crossfit class='w-16 h-16' />
+      </div>
+      <h3 class='text-2xl font-bold text-euforia-pink mb-2'>Crossfit</h3>
+      <p class='text-white text-center opacity-80'>
+        Entrenamiento funcional de alta intensidad para todos los niveles.
+      </p>
+    </div>
+    <!-- Tarjeta de ejemplo: Yoga -->
+    <div
+      class='bg-black/70 rounded-2xl shadow-lg flex flex-col items-center p-6 border-t-4 border-euforia-blue hover:scale-105 transition-transform'
+    >
+      <div class='mb-4'>
+        <Yoga class='w-16 h-16' />
+      </div>
+      <h3 class='text-2xl font-bold text-euforia-blue mb-2'>Yoga</h3>
+      <p class='text-white text-center opacity-80'>
+        Mejora tu flexibilidad, fuerza y bienestar mental.
+      </p>
+    </div>
+    <!-- Tarjeta de ejemplo: Boxeo -->
+    <div
+      class='bg-black/70 rounded-2xl shadow-lg flex flex-col items-center p-6 border-t-4 border-euforia-purple hover:scale-105 transition-transform'
+    >
+      <div class='mb-4'>
+        <Box class='w-16 h-16' />
+      </div>
+      <h3 class='text-2xl font-bold text-euforia-purple mb-2'>Boxeo</h3>
+      <p class='text-white text-center opacity-80'>
+        Desarrolla técnica, agilidad y resistencia con entrenadores expertos.
+      </p>
+    </div>
+    <!-- Tarjeta de ejemplo: Calistenia -->
+    <div
+      class='bg-black/70 rounded-2xl shadow-lg flex flex-col items-center p-6 border-t-4 border-euforia-accent hover:scale-105 transition-transform'
+    >
+      <div class='mb-4'>
+        <Calistenia class='w-16 h-16' />
+      </div>
+      <h3 class='text-2xl font-bold text-euforia-accent mb-2'>Calistenia</h3>
+      <p class='text-white text-center opacity-80'>
+        Entrena usando el peso de tu cuerpo y mejora tu control físico.
+      </p>
+    </div>
+    <!-- Tarjeta de ejemplo: Spinning -->
+    <div
+      class='bg-black/70 rounded-2xl shadow-lg flex flex-col items-center p-6 border-t-4 border-euforia-light hover:scale-105 transition-transform'
+    >
+      <div class='mb-4'>
+        <Spinning class='w-16 h-16' />
+      </div>
+      <h3 class='text-2xl font-bold text-euforia-light mb-2'>Spinning</h3>
+      <p class='text-white text-center opacity-80'>
+        Sesiones energéticas de ciclismo bajo techo para todos los niveles.
+      </p>
+    </div>
+    <!-- Tarjeta de ejemplo: Danza -->
+    <div
+      class='bg-black/70 rounded-2xl shadow-lg flex flex-col items-center p-6 border-t-4 border-euforia-glow hover:scale-105 transition-transform'
+    >
+      <div class='mb-4'>
+        <Danza class='w-16 h-16' />
+      </div>
+      <h3 class='text-2xl font-bold text-euforia-glow mb-2'>Danza</h3>
+      <p class='text-white text-center opacity-80'>
+        Expresa tu creatividad y mejora tu condición física bailando.
+      </p>
+    </div>
+  </div>
+</section>
