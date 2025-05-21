@@ -1,0 +1,50 @@
+---
+import Box from '@/icons/box.astro'
+import Calistenia from '@/icons/calistenia.astro'
+import Crossfit from '@/icons/crossfit.astro'
+import Danza from '@/icons/danza.astro'
+import Spinning from '@/icons/spinning.astro'
+import Yoga from '@/icons/yoga.astro'
+
+import { sports } from "@data"
+
+
+const SPORT_ICONS: Record<string, any> = {
+  Calistenia,
+  Crossfit,
+  Spinning,
+  Yoga,
+  Box,
+  Danza,
+}
+
+const COLORS_CARDS: Record<string, string> = {
+  Calistenia: "euforia-pink",
+  Crossfit: "euforia-purple",
+  Spinning: "euforia-accent",
+  Yoga: "euforia-pink",
+  Box: "euforia-blue",
+  Danza: "euforia-pink",
+}
+---
+
+<div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-6xl'>
+
+{
+  sports.map(({name, icon, description}) => {
+    const Icon = SPORT_ICONS[icon];
+    const color = COLORS_CARDS[name];
+    return (
+      <div
+        class={`card bg-black/70 rounded-2xl shadow-lg flex flex-col items-center p-6 border-t-4 border-${color} hover:scale-105 transition-transform`}
+      >
+        <div class='mb-4'>
+          {Icon && <Icon class='w-16 h-16' />}
+        </div>
+        <h3 class={`text-2xl font-bold text-${color} mb-2`}>{name}</h3>
+        <p class={`text-white text-center opacity-80`}>{description}</p>
+      </div>
+    );
+  })
+}
+</div>
