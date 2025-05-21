@@ -12,6 +12,9 @@
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "@data": [
+        "data.json"
       ]
     }
   }

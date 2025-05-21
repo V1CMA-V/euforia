@@ -1,0 +1,34 @@
+{
+  "sports": [
+    {
+      "name": "Crossfit",
+      "icon": "Crossfit",
+      "description": "Entrenamiento funcional que combina resistencia, fuerza y flexibilidad para mejorar la salud y el rendimiento."
+    },
+    {
+      "name": "Spinning",
+      "icon": "Spinning",
+      "description": "Sesiones energéticas de ciclismo bajo techo para todos los niveles."
+    },
+    {
+      "name": "Yoga",
+      "icon": "Yoga",
+      "description": "Mejora tu flexibilidad, fuerza y bienestar mental."
+    },
+    {
+      "name": "Calistenia",
+      "icon": "Calistenia",
+      "description": "Entrena usando el peso de tu cuerpo y mejora tu control físico."
+    },
+    {
+      "name": "Box",
+      "icon": "Box",
+      "description": "Desarrolla técnica, agilidad y resistencia con entrenadores expertos."
+    },
+    {
+      "name": "Danza",
+      "icon": "Danza",
+      "description": "Expresa tu creatividad y mejora tu condición física bailando."
+    }
+  ]
+}
